@@ -115,5 +115,4 @@ public class LogicalOp {
             emptyArray[i] = array[i];
         }
     }
-
 }
