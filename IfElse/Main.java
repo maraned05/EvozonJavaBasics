@@ -19,6 +19,6 @@ public class Main {
         // System.out.println("Biggest number out of three: " + operations.biggestOutOfThree(3, 5, 6));
 
         //operations.numberingTo100(101);
-        operations.asterisks();
+        operations.CozaLozaWoza();
     }
 }
