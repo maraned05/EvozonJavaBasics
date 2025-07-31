@@ -1,0 +1,40 @@
+package EvozonJavaBasics.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        LogicalOp operations = new LogicalOp();
+        operations.arraysExercise2();
+
+        int[] array = new int[50];
+        int[] newArray = operations.arraysExercise3(array);
+        for (int i = 0; i < 50; i++) {
+            System.out.println(newArray[i]);
+        }
+
+        int[] array1 = {2, 3, 7, 8, 2};
+        System.out.println(operations.arraysExercise4(array1));
+
+        String[] array2 = {"salut", "buna", "ce faci"};
+        System.out.println(operations.arraysExercise5(array2, "ce"));
+
+        System.out.println(operations.arraysExercise6(array1, 9));
+
+        operations.arraysExercise7();
+
+        int[] array3 = {2, 3, 7, 2, 8, 4, 2};
+        int[] newArray1 = operations.arraysExercise8(array3, 2);
+        for (int i = 0; i < newArray1.length; i++) {
+            System.out.print(newArray1[i] + " ");
+        }
+        System.out.println();
+
+        System.out.println(operations.arraysExercise9(array1));
+
+        int[] someArray = {2, 6, 3};
+        int[] emptyArray = new int[3];
+        operations.arraysExercise11(someArray, emptyArray);
+        for (int i = 0; i < emptyArray.length; i++) {
+            System.out.print(emptyArray[i] + " ");
+        }
+    }
+}
