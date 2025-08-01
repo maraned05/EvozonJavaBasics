@@ -5,6 +5,7 @@ import java.time.LocalDate;
 public abstract class Animal {
     protected String name;
     protected int age;
+    protected int weight;
     protected int healthLevel;
     protected int hungerLevel;
     protected int moodLevel;
@@ -16,9 +17,10 @@ public abstract class Animal {
     public Animal() {
     }
 
-    public Animal (String _name, int _age, int _healthLevel, int _hungerLevel, int _moodLevel, String _favouriteFood, String _favouriteActivity) {
+    public Animal (String _name, int _age, int _weight, int _healthLevel, int _hungerLevel, int _moodLevel, String _favouriteFood, String _favouriteActivity) {
         this.name = _name;
         this.age = _age;
+        this.weight = _weight;
         this.healthLevel = _healthLevel;
         this.hungerLevel = _hungerLevel;
         this.moodLevel = _moodLevel;
@@ -28,11 +30,26 @@ public abstract class Animal {
 
     public abstract void speak();
 
+    public void sleeps() {
+        System.out.println("The dog sleeps.");
+    }
+
     public void eat(AnimalFood food) {
-        if (food.isAvailable() && food.getExpirationDate().isAfter(LocalDate.now()))
+        if (food.isAvailable() && food.getExpirationDate().isAfter(LocalDate.now())) {
             this.hungerLevel = Math.max(1, this.hungerLevel - 3);
+            this.moodLevel = Math.min(this.moodLevel + 1, 10);
+            this.healthLevel = Math.min(this.moodLevel + 1, 10);
+
+            if (food instanceof WetAnimalFood)
+                this.weight += 3;
+            else 
+                this.weight += 2;
+        }
         else if (food.isAvailable() && food.getExpirationDate().isBefore(LocalDate.now()))
             this.healthLevel--;
+
+        if (food.isAvailable())
+            food.setQuantity(food.getQuantity() - 1);
     }
 
     public void assignShelter(Shelter shelter) {
@@ -53,6 +70,14 @@ public abstract class Animal {
 
     public void setAge(int _age) {
         this.age = _age;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
     public int getHealthLevel() {

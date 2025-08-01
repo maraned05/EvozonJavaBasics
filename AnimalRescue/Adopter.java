@@ -18,6 +18,23 @@ public abstract class Adopter {
 
     public abstract void adoptAnimal(Animal animal);
 
+    public void nameAnimal(Animal animal, String name) {
+        animal.setName(name);
+    }
+
+    public void feedAnimal(Animal animal, AnimalFood food) {
+        animal.eat(food);
+    }
+
+    public void spendTimeWithAnimal(Animal animal, RecreationalActivity activity) {
+        if (activity.getName().equals("fetching")) // fetching the ball requires more energy
+            animal.setWeight(animal.getWeight() - 2);
+        else
+            animal.setWeight(animal.getWeight() - 1);
+
+        animal.setMoodLevel(Math.min(animal.getMoodLevel() + 1, 10));
+    }
+
     public String getName() {
         return name;
     }

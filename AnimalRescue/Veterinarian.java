@@ -17,6 +17,11 @@ public abstract class Veterinarian {
 
     public abstract void stockMedicalSupply(MedicalSupplies supply);
 
+    public void vaccinateAnimal(Animal animal) {
+        animal.setMoodLevel(Math.max(animal.getMoodLevel() - 3, 1));
+        animal.setHealthLevel(Math.min(animal.getHealthLevel() + 1, 10));
+    }
+
     public String getName() {
         return name;
     }

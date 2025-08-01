@@ -22,6 +22,10 @@ public class Volunteer {
             this.hoursWorked += 2;
     }
 
+    public void playWithAnimal(Animal animal) {
+        animal.setMoodLevel(Math.min(animal.getMoodLevel() + 1, 10));
+    }
+
     public int getId() {
         return id;
     }
