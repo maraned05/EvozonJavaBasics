@@ -4,55 +4,37 @@ import java.time.LocalDate;
 
 public class App {
     public static void main(String[] args) {
-        Animal animal = new Animal();
-        animal.setName("Marcel");
-        animal.setAge(2);
-        animal.setHealthLevel(9);
-        animal.setHungerLevel(3);
-        animal.setMoodLevel(7);
-        animal.setFavouriteFood("Bobite");
-        animal.setFavouriteActivity("Fetch");
+        Dog doggy = new Dog();
+        doggy.setAge(10);
 
-        Adopter adopter = new Adopter();
-        adopter.setName("Ion");
-        adopter.setAvailableBudget(300);
+        Cat kitten = new Cat();
+        kitten.setMoodLevel(3);
 
-        AnimalFood food = new AnimalFood();
-        food.setName("Bobite");
-        food.setPrice(20);
-        food.setQuantity(80);
-        food.setExpirationDate(LocalDate.of(2025, 10, 9));
-        food.setAvailable(true);
+        Horse horsy = new Horse();
+        horsy.setHealthLevel(9);
 
-        RecreationalActivity activity = new RecreationalActivity();
-        activity.setName("walking");
+        DryAnimalFood bobite = new DryAnimalFood();
+        bobite.setExpirationDate(LocalDate.of(2025, 11, 23));
 
-        Veterinarian veterinarian = new Veterinarian();
-        veterinarian.setName("John");
-        veterinarian.setSpecialization("Cardiology");
+        WetAnimalFood conserva = new WetAnimalFood();
+        conserva.setAvailable(true);
 
-        Game game = new Game();
-        game.setAdopter(adopter);
-        game.setDog(animal);
-        game.setVeterinarian(veterinarian);
+        JuniorVeterinarian veterinarian1 = new JuniorVeterinarian();
+        veterinarian1.setName("Ioana");
 
-        Janitor janitor = new Janitor();
-        janitor.setId(1);
-        janitor.setName("Vasile");
+        SeniorVeterinarian veterinarian2 = new SeniorVeterinarian();
+        veterinarian2.setSpecialization("ORL");
 
-        Shelter shelter = new Shelter();
-        shelter.setId(1);
-        shelter.setCapacity(10);
-        shelter.setJanitor(janitor);
+        TemporaryAdopter adopter1 = new TemporaryAdopter();
+        adopter1.setAvailableBudget(400);
 
-        MedicalSupplies bandages = new MedicalSupplies();
-        bandages.setName("Bandages");
-        bandages.setQuantity(40);
-        bandages.setAvailable(true);
+        PermanentAdopter adopter2 = new PermanentAdopter();
+        adopter2.setName("George");
 
-        Volunteer volunteer = new Volunteer();
-        volunteer.setId(1);
-        volunteer.setName("Mara");
-        volunteer.setHoursWorked(30);
+        IndoorActivity activity1 = new IndoorActivity();
+        activity1.setName("fetch");
+
+        OutdoorActivity activity2 = new OutdoorActivity();
+        activity2.setName("walk");
     }
 }
