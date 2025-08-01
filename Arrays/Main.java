@@ -1,7 +1,7 @@
 package EvozonJavaBasics.Arrays;
 
-import java.util.ArrayList;
-import java.util.List;
+// import java.util.ArrayList;
+// import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -40,27 +40,35 @@ public class Main {
         //     System.out.print(emptyArray[i] + " ");
         // }
 
-        Lists listOperations = new Lists();
-        List<Integer> list = new ArrayList<>();
-        list.add(4);
-        list.add(5);
-        list.add(2);
-        list.add(1);
+        // Lists listOperations = new Lists();
+        // List<Integer> list = new ArrayList<>();
+        // list.add(4);
+        // list.add(5);
+        // list.add(2);
+        // list.add(1);
         // listOperations.listsExercise1(list);
         // listOperations.listsExercise2(list, 0);
         // System.out.println(list.getLast());
         //listOperations.listsExercise3(list, 2);
         //listOperations.listsExercise4(list);
 
-        List<String> list1 = new ArrayList<>();
-        list1.add("helo");
-        list1.add("buna");
-        listOperations.listsExercise5(list1, "ce", 0);
-        for (String a: list1) {
-            System.out.println(a);
-        }
+        // List<String> list1 = new ArrayList<>();
+        // list1.add("helo");
+        // list1.add("buna");
+        // listOperations.listsExercise5(list1, "ce", 0);
+        // for (String a: list1) {
+        //     System.out.println(a);
+        // }
 
-        listOperations.listsExercise7(list);
-        System.out.println(listOperations.listsExercise8(list));
+        // listOperations.listsExercise7(list);
+        // System.out.println(listOperations.listsExercise8(list));
+
+        ArraysOptional arrayOperations = new ArraysOptional();
+        int[] array = {2, 6, 3, -1};
+        int[] newArray = arrayOperations.exercise2(array, 0, 9);
+        for (int i = 0; i < newArray.length; i++) {
+            System.out.print(newArray[i] + " ");
+        }
+        arrayOperations.exercise3(array);
     }
 }
