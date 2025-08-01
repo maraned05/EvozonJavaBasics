@@ -3,7 +3,7 @@ package EvozonJavaBasics.AnimalRescue;
 public class Shelter {
     private int id;
     private int capacity;
-    private Janitor janitor;
+    private Janitor janitor = null;
 
     public Shelter() {
         
@@ -13,6 +13,10 @@ public class Shelter {
         this.id = _id;
         this.capacity = _capacity;
         this.janitor = _janitor;
+    }
+
+    public void assignJanitor(Janitor janitor) {
+        this.janitor = janitor;
     }
 
     public int getId() {

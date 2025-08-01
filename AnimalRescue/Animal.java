@@ -1,5 +1,7 @@
 package EvozonJavaBasics.AnimalRescue;
 
+import java.time.LocalDate;
+
 public abstract class Animal {
     protected String name;
     protected int age;
@@ -8,6 +10,8 @@ public abstract class Animal {
     protected int moodLevel;
     protected String favouriteFood;
     protected String favouriteActivity;
+    protected int shelterId = -1;
+    protected boolean isAdopted =  false;
 
     public Animal() {
     }
@@ -23,6 +27,17 @@ public abstract class Animal {
     }
 
     public abstract void speak();
+
+    public void eat(AnimalFood food) {
+        if (food.isAvailable() && food.getExpirationDate().isAfter(LocalDate.now()))
+            this.hungerLevel = Math.max(1, this.hungerLevel - 3);
+        else if (food.isAvailable() && food.getExpirationDate().isBefore(LocalDate.now()))
+            this.healthLevel--;
+    }
+
+    public void assignShelter(Shelter shelter) {
+        this.shelterId = shelter.getId();
+    }
 
     public String getName() {
         return this.name;
@@ -78,5 +93,21 @@ public abstract class Animal {
 
     public void setFavouriteActivity(String _favouriteActivity) {
         this.favouriteActivity = _favouriteActivity;
+    }
+
+    public int getShelterId() {
+        return shelterId;
+    }
+
+    public void setShelterId(int shelterId) {
+        this.shelterId = shelterId;
+    }
+
+    public boolean isAdopted() {
+        return isAdopted;
+    }
+
+    public void setAdopted(boolean isAdopted) {
+        this.isAdopted = isAdopted;
     }
 }

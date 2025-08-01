@@ -15,6 +15,13 @@ public class Volunteer {
         this.hoursWorked = _hoursWorked;
     }
 
+    public void takeCareOfAnimal(Animal animal) {
+        if (animal.getHealthLevel() < 6)
+            this.hoursWorked += 5;
+        else 
+            this.hoursWorked += 2;
+    }
+
     public int getId() {
         return id;
     }

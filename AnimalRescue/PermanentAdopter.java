@@ -13,4 +13,10 @@ public class PermanentAdopter extends Adopter {
     public String getTitle() {
         return "Permanent Adopter " + this.name;
     }
+
+    @Override
+    public void adoptAnimal(Animal animal) {
+        this.adoptedAnimal = animal;
+        animal.setAdopted(true);
+    }
 }

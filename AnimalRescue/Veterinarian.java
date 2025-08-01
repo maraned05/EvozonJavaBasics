@@ -15,6 +15,8 @@ public abstract class Veterinarian {
 
     public abstract String getTitle();
 
+    public abstract void stockMedicalSupply(MedicalSupplies supply);
+
     public String getName() {
         return name;
     }
