@@ -1,8 +1,8 @@
 package EvozonJavaBasics.AnimalRescue;
 
 public class Veterinarian {
-    private String name;
-    private String specialization;
+    protected String name;
+    protected String specialization;
 
     public Veterinarian() {
         
@@ -11,6 +11,10 @@ public class Veterinarian {
     public Veterinarian(String _name, String _specialization) {
         this.name = _name;
         this.specialization = _specialization;
+    }
+
+    public String getTitle() {
+        return "Veterinarian " + this.name;
     }
 
     public String getName() {

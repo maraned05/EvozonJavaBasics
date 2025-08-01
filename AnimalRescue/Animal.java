@@ -1,13 +1,13 @@
 package EvozonJavaBasics.AnimalRescue;
 
 public class Animal {
-    private String name;
-    private int age;
-    private int healthLevel;
-    private int hungerLevel;
-    private int moodLevel;
-    private String favouriteFood;
-    private String favouriteActivity;
+    protected String name;
+    protected int age;
+    protected int healthLevel;
+    protected int hungerLevel;
+    protected int moodLevel;
+    protected String favouriteFood;
+    protected String favouriteActivity;
 
     public Animal() {
         
@@ -21,6 +21,10 @@ public class Animal {
         this.moodLevel = _moodLevel;
         this.favouriteFood = _favouriteFood;
         this.favouriteActivity = _favouriteActivity;
+    }
+
+    public void speak() {
+        System.out.println("The animal speaks.");
     }
 
     public String getName() {

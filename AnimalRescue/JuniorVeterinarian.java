@@ -8,4 +8,9 @@ public class JuniorVeterinarian extends Veterinarian {
     public JuniorVeterinarian(String _name, String _specialization) {
         super(_name, _specialization);
     }
+
+    @Override
+    public String getTitle() {
+        return "Junior Veterinarian " + this.name;
+    }
 }

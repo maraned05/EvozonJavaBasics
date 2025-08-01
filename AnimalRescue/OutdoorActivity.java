@@ -8,4 +8,9 @@ public class OutdoorActivity extends RecreationalActivity {
     public OutdoorActivity(String _name) {
         super(_name);
     }
+
+    @Override
+    public String getDetails() {
+        return this.name + " takes place outdoors!";
+    }
 }

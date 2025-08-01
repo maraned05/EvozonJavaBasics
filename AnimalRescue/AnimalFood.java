@@ -3,11 +3,11 @@ package EvozonJavaBasics.AnimalRescue;
 import java.time.LocalDate;
 
 public class AnimalFood {
-    private String name;
-    private int price;
-    private int quantity;
-    private LocalDate expirationDate;
-    private boolean isAvailable;
+    protected String name;
+    protected int price;
+    protected int quantity;
+    protected LocalDate expirationDate;
+    protected boolean isAvailable;
 
     public AnimalFood() {
         
@@ -19,6 +19,10 @@ public class AnimalFood {
         this.quantity = _quantity;
         this.expirationDate = _expirationDate;
         this.isAvailable = _isAvailable;
+    }
+
+    public int getTotalPrice() {
+        return this.price;
     }
 
     public String getName() {

@@ -1,7 +1,7 @@
 package EvozonJavaBasics.AnimalRescue;
 
 public class RecreationalActivity {
-    private String name;
+    protected String name;
 
     public RecreationalActivity() {
         
@@ -9,6 +9,10 @@ public class RecreationalActivity {
 
     public RecreationalActivity(String _name) {
         this.name = _name;
+    }
+
+    public String getDetails() {
+        return this.name + " takes place anywhere!";
     }
 
     public String getName() {
