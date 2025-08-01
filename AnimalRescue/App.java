@@ -49,6 +49,7 @@ public class App {
         System.out.println(activity1.getDetails());
 
         OutdoorActivity activity2 = new OutdoorActivity();
+        activity2.setName("walk");
         System.out.println(activity2.getDetails());
     }
 }

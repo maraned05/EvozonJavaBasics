@@ -1,6 +1,6 @@
 package EvozonJavaBasics.AnimalRescue;
 
-public class Adopter {
+public abstract class Adopter {
     protected String name;
     protected int availableBudget;
 
@@ -13,9 +13,7 @@ public class Adopter {
         this.availableBudget = _availableBudget;
     }
 
-    public String getTitle() {
-        return "Adopter " + this.name;
-    }
+    public abstract String getTitle();
 
     public String getName() {
         return name;

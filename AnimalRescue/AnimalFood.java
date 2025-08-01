@@ -2,7 +2,7 @@ package EvozonJavaBasics.AnimalRescue;
 
 import java.time.LocalDate;
 
-public class AnimalFood {
+public abstract class AnimalFood {
     protected String name;
     protected int price;
     protected int quantity;
@@ -21,9 +21,7 @@ public class AnimalFood {
         this.isAvailable = _isAvailable;
     }
 
-    public int getTotalPrice() {
-        return this.price;
-    }
+    public abstract int getTotalPrice();
 
     public String getName() {
         return name;
